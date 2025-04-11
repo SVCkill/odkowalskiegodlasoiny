@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <link rel="stylesheet" href="assets/index.css">
-    <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4=w240-h480-rw">
-    <title>mObywatel</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4=w240-h480-rw">
+    <title>mObywatel</title>
 </head>
 <body>
     <p class="logo_text">siemano obywatelek</p>
-
     <p class="warning">dla SOINKI WARJACIKA<br>BY KOWALSKII</p>
-
+    
+    <!-- Instrukcja -->
     <div class="guide_holder">
         <div class="top_holder">
             <p class="guide_title">Instrukcja</p>
             <img class="arrow" src="https://i.imgur.com/aUZmu0W.png">
         </div>
         <div class="guide_text">
-            <span style="font-size: 17px; font-weight: 500;">Dla systemu IOS:</span><br>
+            <span class="subtitle">Dla systemu IOS:</span><br>
             <ul>
                 <li>Upewnij się, że używasz przeglądarki Safari</li>
                 <li>Uzupełnij dane i kliknij wejdź</li>
-                <li>Naciśji udostępnij -&gt; Do Ekranu głównego</li>
+                <li>Naciśnij udostępnij -&gt; Do Ekranu głównego</li>
             </ul>
-            <span style="font-size: 17px; font-weight: 500;">Dla systemu Android:</span>
+            <span class="subtitle">Dla systemu Android:</span>
             <ul>
-                <li>Upewnij się, że używasz przeglądarki google lub chrome</li>
+                <li>Upewnij się, że używasz przeglądarki Google lub Chrome</li>
                 <li>Uzupełnij dane i kliknij wejdź</li>
-                <li>Naciśji 3 kropki -&gt; Dodaj do ekranu głównego</li>
+                <li>Naciśnij 3 kropki -&gt; Dodaj do ekranu głównego</li>
             </ul>
         </div>
     </div>
 
+    <!-- INFO OGÓLNE -->
     <div class="guide_holder">
         <div class="top_holder">
             <p class="guide_title">INFO OGÓLNE - KLIKNIJ TUTAJ</p>
             <img class="arrow" src="https://i.imgur.com/aUZmu0W.png">
         </div>
         <div class="guide_text">
-            <!-- Here will be your text content -->
+            <span class="subtitle">INFO DOTYCZĄCE ZDJĘĆ SWOJEGO RYJA!!!</span>
+            <ul>
+                <li>Info o wyglądzie zdjęcia: cała głowa i górna część barków.</li>
+                <li>Usuń tło zdjęcia na https://www.remove.bg.</li>
+                <li>Zaokrągl zdjęcie na https://round-corner.imageonline.co/.</li>
+                <li>Załaduj zdjęcie czarno-białe lub z usuniętym tłem.</li>
+                <li>Zdjęcie nie może być starsze niż 6 miesięcy.</li>
+            </ul>
+            <span class="subtitle">JAK UŻYWAĆ</span>
+            <ul>
+                <li>Używaj z ostrożnością, nie dawaj kasjerce telefonu.</li>
+                <li>Wszystkie dane są zapisywane w urządzeniu, nie wysyłamy ich nigdzie.</li>
+                <li>Zdjęcie musi wyglądać legitnie.</li>
+                <li>Używaj łatwych do zapamiętania danych.</li>
+                <li>Wiek 18+ jest wymagany.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- Image Upload Section -->
+    <!-- Przesyłanie zdjęcia -->
     <div class="upload">
         <p class="error">To pole jest wymagane</p>
         <img class="upload_uploaded">
@@ -53,132 +70,101 @@
         </div>
     </div>
 
-    <!-- Input Fields -->
+    <!-- Formularz -->
     <div class="input_holder">
         <input type="text" id="name" class="input" placeholder="">
         <span class="placeholder">Imię (imiona)</span>
         <p class="error">To pole jest wymagane</p>
     </div>
-    <!-- Repeat the input_holder for other fields... -->
+
+    <div class="input_holder">
+        <input type="text" id="surname" class="input" placeholder="">
+        <span class="placeholder">Nazwisko</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="sex" class="input" placeholder="">
+        <span class="placeholder">Płeć</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="nationality" class="input" placeholder="">
+        <span class="placeholder">Obywatelstwo</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="birthday" class="input" placeholder="">
+        <span class="placeholder">Data urodzenia (DD.MM.YYYY)</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="familyName" class="input" placeholder="">
+        <span class="placeholder">Nazwisko rodowe</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="fathersFamilyName" class="input" placeholder="">
+        <span class="placeholder">Nazwisko rodowe ojca</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="mothersFamilyName" class="input" placeholder="">
+        <span class="placeholder">Nazwisko rodowe matki</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <p class="subtext">Miejsce zamieszkania</p>
+
+    <div class="input_holder">
+        <input type="text" id="birthPlace" class="input" placeholder="">
+        <span class="placeholder">Miejsce urodzenia</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="countryOfBirth" class="input" placeholder="">
+        <span class="placeholder">Kraj urodzenia</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="adress1" class="input" placeholder="">
+        <span class="placeholder">Ulica i numer domu</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="adress2" class="input" placeholder="">
+        <span class="placeholder">Kod pocztowy</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="city" class="input" placeholder="">
+        <span class="placeholder">Miasto</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="checkInDate" class="input" placeholder="">
+        <span class="placeholder">Data zameldowania na pobyt stały (DD.MM.YYYY)</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
 
     <a class="go">wejdź</a>
 
-    <!-- Discord Link Section -->
     <div class="discord" onclick="location.href = 'https://guns.lol/ykc'">
         <div class="inner_grid">
             <p class="discord_text">DC :https://discord.gg/aGXekCTUSp </p>
         </div>
     </div>
 
-    <script>
-        var upload = document.querySelector(".upload");
-
-        var imageInput = document.createElement("input");
-        imageInput.type = "file";
-        imageInput.accept = ".jpeg,.png,.gif";
-
-        document.querySelectorAll(".input_holder").forEach((element) => {
-            var input = element.querySelector(".input");
-            input.addEventListener('click', () => {
-                element.classList.remove("error_shown");
-            });
-        });
-
-        upload.addEventListener('click', () => {
-            imageInput.click();
-        });
-
-        imageInput.addEventListener('change', (event) => {
-            upload.classList.remove("upload_loaded");
-            upload.classList.add("upload_loading");
-            upload.removeAttribute("selected");
-
-            var file = imageInput.files[0];
-
-            if (!file) {
-                alert("Nie wybrano pliku!");
-                upload.classList.remove("upload_loading");
-                return;
-            }
-
-            var data = new FormData();
-            data.append("image", file);
-
-            fetch('https://api.imgur.com/3/image', {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Client-ID 4ecc257cbb25ccc'
-                },
-                body: data
-            })
-            .then(result => result.json())
-            .then(response => {
-                if (response.success) {
-                    var url = response.data.link;
-                    upload.classList.remove("error_shown");
-                    upload.setAttribute("selected", url);
-                    upload.classList.add("upload_loaded");
-                    upload.classList.remove("upload_loading");
-                    upload.querySelector(".upload_uploaded").src = url;
-                } else {
-                    alert("Wystąpił problem z przesyłaniem obrazka.");
-                    console.error(response);
-                    upload.classList.remove("upload_loading");
-                }
-            })
-            .catch(err => {
-                alert("Błąd przy wysyłaniu zdjęcia: " + err.message);
-                console.error(err);
-                upload.classList.remove("upload_loading");
-            });
-        });
-
-        document.querySelector(".go").addEventListener('click', () => {
-            var empty = [];
-            var params = new URLSearchParams();
-
-            if (!upload.hasAttribute("selected")) {
-                empty.push(upload);
-                upload.classList.add("error_shown");
-            } else {
-                params.append("image", upload.getAttribute("selected"));
-            }
-
-            document.querySelectorAll(".input_holder").forEach((element) => {
-                var input = element.querySelector(".input");
-                params.append(input.id, input.value);
-
-                if (isEmpty(input.value)) {
-                    empty.push(element);
-                    element.classList.add("error_shown");
-                }
-            });
-
-            if (empty.length != 0) {
-                empty[0].scrollIntoView({ behavior: "smooth", block: "center" });
-            } else {
-                forwardToId(params);
-            }
-        });
-
-        function isEmpty(value) {
-            let pattern = /^\s*$/;
-            return pattern.test(value);
-        }
-
-        function forwardToId(params) {
-            // Zakładamy, że masz plik id.html obok index.html
-            location.href = "id.html?" + params.toString();
-        }
-
-        // Rozwijanie sekcji .guide_holder
-        var guides = document.querySelectorAll(".guide_holder");
-        guides.forEach(function(guide) {
-            guide.addEventListener('click', () => {
-                guide.classList.toggle("unfolded");
-            });
-        });
-    </script>
-
+    <script src="assets/index.js"></script>
 </body>
 </html>
