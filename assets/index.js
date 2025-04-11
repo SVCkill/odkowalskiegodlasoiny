@@ -38,7 +38,13 @@ fetch('https://api.imgur.com/3/image', {
     },
     body: data
 })
-.then(result => result.json())
+.then(response => {
+    // Sprawdzamy, czy odpowiedź ma poprawny kod statusu
+    if (!response.ok) {
+        throw new Error('Błąd podczas przesyłania obrazu: ' + response.statusText);
+    }
+    return response.json();
+})
 .then(response => {
     if (response.success) {
         var url = response.data.link;
@@ -55,9 +61,10 @@ fetch('https://api.imgur.com/3/image', {
 })
 .catch(err => {
     alert("Błąd przy wysyłaniu zdjęcia: " + err.message);
-    console.error("Fetch error:", err);
+    console.error("Błąd fetch:", err);
     upload.classList.remove("upload_loading");
 });
+
 
 document.querySelector(".go").addEventListener('click', () => {
     var empty = [];
