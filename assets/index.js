@@ -31,33 +31,32 @@ imageInput.addEventListener('change', (event) => {
     var data = new FormData();
     data.append("image", file);
 
-    fetch('https://api.imgur.com/3/image', {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Client-ID 4ecc257cbb25ccc'
-        },
-        body: data
-    })
-    .then(result => result.json())
-    .then(response => {
-        if (response.success) {
-            var url = response.data.link;
-            upload.classList.remove("error_shown");
-            upload.setAttribute("selected", url);
-            upload.classList.add("upload_loaded");
-            upload.classList.remove("upload_loading");
-            upload.querySelector(".upload_uploaded").src = url;
-        } else {
-            alert("Wystąpił problem z przesyłaniem obrazka.");
-            console.error(response);
-            upload.classList.remove("upload_loading");
-        }
-    })
-    .catch(err => {
-        alert("Błąd przy wysyłaniu zdjęcia: " + err.message);
-        console.error(err);
+fetch('https://api.imgur.com/3/image', {
+    method: 'POST',
+    headers: {
+        'Authorization': 'Client-ID 4ecc257cbb25ccc'
+    },
+    body: data
+})
+.then(result => result.json())
+.then(response => {
+    if (response.success) {
+        var url = response.data.link;
+        upload.classList.remove("error_shown");
+        upload.setAttribute("selected", url);
+        upload.classList.add("upload_loaded");
         upload.classList.remove("upload_loading");
-    });
+        upload.querySelector(".upload_uploaded").src = url;
+    } else {
+        alert("Wystąpił problem z przesyłaniem obrazka.");
+        console.error(response);
+        upload.classList.remove("upload_loading");
+    }
+})
+.catch(err => {
+    alert("Błąd przy wysyłaniu zdjęcia: " + err.message);
+    console.error("Fetch error:", err);
+    upload.classList.remove("upload_loading");
 });
 
 document.querySelector(".go").addEventListener('click', () => {
